@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>TechStore</h1>
+    <p>Sistema de gerenciamento de produtos</p>
+
+    <form id="form-produto">
+        <input type="hidden" id="produto-id"> <!-- ID do produto oculto -->
+        <input type="text" id="nome" placeholder="Nome" required>
+        <input type="text" id="descricao" placeholder="Descrição" required>
+        <input type="number" id="preco" placeholder="Preço" required>
+        <input type="number" id="quantidade" placeholder="Quantidade" required>
+        <!-- Botões de ação -->
+        <button type="submit">Inserir Produto</button>
+        <button type="button" onclick="atualizarProduto()">Atualizar Produto</button>
+    </form>
+
+    <p id="mensagem"></p> <!-- Exibir mensagens de sucesso ou erro -->
+
+    <h2>Lista de Produtos</h2>
+    <button onclick="buscarProdutos()">Carregar Produtos</button>
+    <ul id="lista-produtos"></ul>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
